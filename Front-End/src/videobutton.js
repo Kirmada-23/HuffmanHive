@@ -32,7 +32,7 @@ function VideoButton() {
 
   const handleDownload = () => {
     if (downloadLink === "success" && videoName) {
-      fetch(`http://localhost:5000/compressed_video.mp4?fileName=${videoName}`)
+      fetch(`https://comp-lucifer.alchemist.cyou/compressed_video.mp4?fileName=${videoName}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
