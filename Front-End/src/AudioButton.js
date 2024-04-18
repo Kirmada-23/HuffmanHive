@@ -11,7 +11,7 @@ function AudioButton() {
       const formData = new FormData();
       formData.append("audio", file);
 
-      fetch("http://141.148.238.92:5000/compress-audio", {
+      fetch("https://comp-lucifer.alchemist.cyou/compress-audio", {
         method: "POST",
         body: formData,
       })
