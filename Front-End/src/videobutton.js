@@ -10,7 +10,7 @@ function VideoButton() {
       const formData = new FormData();
       formData.append("video", file);
 
-      fetch("https://comp-lucifer.alchemist.cyou/compress-video", {
+      fetch("http://141.148.238.92:5000/compress-video", {
         method: "POST",
         body: formData,
       })
@@ -32,7 +32,7 @@ function VideoButton() {
 
   const handleDownload = () => {
     if (downloadLink === "success" && videoName) {
-      fetch(`https://comp-lucifer.alchemist.cyou/compressed_video.mp4?fileName=${videoName}`)
+      fetch(`http://141.148.238.92:5000/compressed_video.mp4?fileName=${videoName}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
