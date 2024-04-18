@@ -10,7 +10,7 @@ function VideoButton() {
       const formData = new FormData();
       formData.append("video", file);
 
-      fetch("http://141.148.238.92:5000/compress-video", {
+      fetch("https://comp-lucifer.alchemist.cyou/compress-video", {
         method: "POST",
         body: formData,
       })
