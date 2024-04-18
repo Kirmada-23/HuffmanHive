@@ -33,7 +33,7 @@ function AudioButton() {
 
   const handleDownload = () => {
     if (downloadLink === "success" && audioName) {
-      fetch(`http://localhost:5000/compressed_audio.mp3?fileName=${audioName}`)
+      fetch(`https://comp-lucifer.alchemist.cyou/compressed_audio.mp3?fileName=${audioName}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
